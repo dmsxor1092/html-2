@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tsst.css">
+    <title>Document</title>
+</head>
+<body>
+   
+   <div class="alert-box" id="alert">
+    <p class="alert">알림창임</p>
+    <button id="close">닫기</button>
+  </div>
+<button onclick="alertOpen('block','아이디 입력하셈')">버튼1</button>
+<button onclick="alertOpen('block','비번 입력하셈')">버튼2</button>
+
+
+    <script>
+      document.querySelector('#close').addEventListener('click', 
+        function(){
+          document.querySelector('.alert-box').style.display='none';
+      })
+      function alertOpen(a,b){
+       
+        document.querySelector('.alert-box').style.display=a;
+        document.querySelector('.alert').innerHTML=b;
+      }
+       
+    </script>
+</body>
+</html>
